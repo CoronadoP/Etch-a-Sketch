@@ -2,6 +2,7 @@
 let clearButton = document.querySelector("#clear");
 let sizeButton = document.querySelector("#size");
 let grid = document.querySelector('#grid');
+let colorInput = document.querySelector("#chosen-color");
 let gridSquareId = [];
 let auto = "auto";
 
@@ -50,15 +51,26 @@ function clearGrid(){
     return;
 }
 
+//Function called when color picker changes value
+function updateColor(event){
+    let color = event.target.value;
+    colorChangingEvent(color);
+    return;
+}
+
+
 //Initialize Website Function
 function initializeWebsite(){
     createGrid();
     colorChangingEvent();
     clearButton.addEventListener('click', clearGrid);
+    colorInput.addEventListener("input", updateColor);
 
 }
 
-initializeWebsite();
+
+
+window.addEventListener("load", initializeWebsite, false);
 
 
 
