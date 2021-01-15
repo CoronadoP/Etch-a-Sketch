@@ -1,6 +1,4 @@
-//https://levelup.gitconnected.com/build-an-etch-a-sketch-knock-off-with-plain-js-css-and-html-9ab9e104b43f
 let clearButton = document.querySelector("#clear");
-let sizeButton = document.querySelector("#size");
 let grid = document.querySelector('#grid');
 let colorInput = document.querySelector("#chosen-color");
 let gridSquareId = [];
